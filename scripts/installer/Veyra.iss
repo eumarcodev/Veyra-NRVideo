@@ -2,6 +2,10 @@
   #error Build this installer with scripts/package-windows-installer.py.
 #endif
 
+#ifndef SetupCompression
+  #define SetupCompression "lzma2/fast"
+#endif
+
 #define DisplayName "Veyra (" + Flavor + ")"
 #define InstallId "Veyra.Win64." + Flavor
 
@@ -40,7 +44,7 @@ WizardImageBackColor=#161425
 WizardSmallImageFile={#BrandIcon}
 WizardSmallImageBackColor=#161425
 WizardSizePercent=118,112
-Compression=lzma2/fast
+Compression={#SetupCompression}
 SolidCompression=yes
 LZMANumBlockThreads=1
 OutputDir={#OutputDir}

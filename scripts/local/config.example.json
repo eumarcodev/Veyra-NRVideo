@@ -1,0 +1,24 @@
+{
+  "artifactsRoot": "E:/projects/pessoal",
+  "flavor": "AMD",
+  "installDir": "%LOCALAPPDATA%/Programs/Veyra (AMD)",
+  "iscc": "E:/projects/pessoal/deps/inno-setup-7.1.1/ISCC.exe",
+  "donor": "E:/projects/pessoal/deps/veyra-donor/2.2.0-AMD",
+  "compression": "zip/1",
+  "overlays": [
+    {
+      "name": "ffmpeg-d3d12va-refonly",
+      "enabled": true,
+      "from": "E:/projects/pessoal/build/d3d12va-refonly/patched-install/bin",
+      "to": "",
+      "files": ["avcodec-63.dll", "avfilter-12.dll", "avformat-63.dll", "avutil-61.dll", "swresample-7.dll", "swscale-10.dll"]
+    },
+    {
+      "name": "app-build",
+      "enabled": false,
+      "from": "E:/projects/pessoal/build/veyra-app/x64-release",
+      "to": "",
+      "files": ["veyra_qml_ui.exe"]
+    }
+  ]
+}
